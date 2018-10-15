@@ -1,0 +1,72 @@
+{
+    "name": "sct_tester",
+    "displayName": "SCT Tester",
+    "description": "Extensions for testing programs for FRI BUN",
+    "version": "1.0.0",
+    "publisher": "slocomptech",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Debuggers"
+    ],
+    "activationEvents": [
+        "onCommand:sct_tester.tj"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "sct_tester.tj",
+                "title": "Test Java Program"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "SCT Tester Java",
+            "properties": {
+                "sct_tester.tj_path": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "Path to tj.exe file"
+                },
+                "sct_tester.tj_args": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "Additional args for tj.exe"
+                },
+                "sct_tester.clearoldresults": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Clear old results in results folder"
+                },
+                "sct_tester.autoopenresults": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Automaticly opens results html file in web browser when finished."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vsce": "^1.52.0",
+        "vscode": "^1.1.21"
+    }
+}
