@@ -1,6 +1,6 @@
-# FRI tester
+# SCT tester
 
-FRI tester was created in my 1st grade at Univerity of Ljubljana Faculty of Computer and Information Science to help me test java programs.
+SCT tester was created in my 1st grade at Univerity of Ljubljana Faculty of Computer and Information Science to help me test java programs.
 
 ## Features
 
@@ -32,16 +32,16 @@ This extension contributes the following settings:
 * `sct_tester.tj_path`: path to tj.exe (global program, it is overriden by local tj.exe if exists)
 * `sct_tester.tj_args`: additional args to run tj.exe with
 * `sct_tester.clearoldresults`: clear old results if present
-* `sct_tester.autoopenresults`: automaticly opens results html file in web browser when tests are finished
+* `sct_tester.autoopenresults`: automaticly opens results html file in web browser when tests are finished (only windows)
 
 Or you can override global settings with specific settings for directory with `.tconfig` file:
 
 ```json
 {
-    "tj_path": "", /* Path to tj.exe*/
-    "tj_args": "", /* Additonal args to run with */
-    "clearoldresults": true, /* In case results folder is not empty when you run tester, then extension will delete old result reports */
-    "autoopenresults": false /* Auto open results html file in browser (only works on windows) */
+    "tj_path": "",
+    "tj_args": "",
+    "clearoldresults": true,
+    "autoopenresults": false
 }
 ```
 
