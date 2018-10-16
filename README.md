@@ -47,7 +47,8 @@ Or you can override global settings with specific settings for directory with `.
 
 ## Known Issues
 
-No known issues.
+1.0.0
+- Not working when results directory doesn't exist
 
 ## Release Notes
 
