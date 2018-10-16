@@ -1,11 +1,15 @@
 {
-    "name": "sct_tester",
+    "name": "scttester",
     "displayName": "SCT Tester",
     "description": "Extensions for testing programs for FRI BUN",
     "version": "1.0.0",
     "publisher": "slocomptech",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SloCompTech/sct_tester.git"
+    },
     "engines": {
-        "vscode": "^1.27.0"
+        "vscode": "^1.26.0"
     },
     "categories": [
         "Debuggers"
@@ -56,6 +60,7 @@
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
+        "package": "node ./node_modules/vsce/out/vsce package",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",

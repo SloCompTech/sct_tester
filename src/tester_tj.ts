@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const { exec } = require('child_process');
+//const { exec } = require('child_process');
 
 export class Tester_tj extends Tester {
 
@@ -162,7 +162,7 @@ export class Tester_tj extends Tester {
             }
         } else {
             console.log('Results directory not found, creating one');
-            this.gConfig.result.dir = path.join(this.gConfig.file.dir || '', this.gConfig.file.name || '', '_results');
+            this.gConfig.result.dir = path.join(this.gConfig.file.dir || '', this.gConfig.file.name + '_results');
             fs.mkdirSync(this.gConfig.result.dir);
         }
 
