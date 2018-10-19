@@ -2,6 +2,14 @@
 
 SCT tester was created in my 1st grade at Univerity of Ljubljana Faculty of Computer and Information Science to help me test java programs.
 
+## Installing
+
+1. Download `.vsix` file from [here](https://github.com/SloCompTech/sct_tester/releases).
+2. Go to Visual Studio Code and navigate to debug tab in sidebar.
+3. On right upper corner of extension tab press `...`.
+4. Choose `Install from VSIX ...` option and select downloaded file.
+5. Enjoy using this plugin (see usage).
+
 ## Features
 
 This plugin enables you to easily test java programs using tj.exe program and it also creates results folder for you and clean after you.
