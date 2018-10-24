@@ -4,6 +4,13 @@ SCT tester was created in my 1st grade at Univerity of Ljubljana Faculty of Comp
 
 ## Installing
 
+**Requirements:**
+
+- Java JDK
+- mono framework (on Mac and linux)
+
+**Install:**
+
 1. Download `.vsix` file from [here](https://github.com/SloCompTech/sct_tester/releases).
 2. Go to Visual Studio Code and navigate to debug tab in sidebar.
 3. On right upper corner of extension tab press `...`.
@@ -15,6 +22,7 @@ SCT tester was created in my 1st grade at Univerity of Ljubljana Faculty of Comp
 This plugin enables you to easily test java programs using tj.exe program and it also creates results folder for you and clean after you.
 
 Usage:
+
 - **Ctrl + Shift + p**
 - type **>tj**
 - press enter
@@ -22,9 +30,9 @@ Usage:
 
 ## Requirements
 
-* `tj.exe` program for testing, can be in following places:
-    * __anywhere__ - Program can be anywhere, but then it must be imported in settings (`tj_path`)
-    * __in folder beside .java file__ - Program doesn't need to be imported
+- `tj.exe` program for testing, can be in following places:
+    - __anywhere__ - Program can be anywhere, but then it must be imported in settings (`tj_path`)
+    - __in folder beside .java file__ - Program doesn't need to be imported
 
 ## File and directory naming
 
@@ -37,10 +45,10 @@ Structure of file/directory names:
 
 This extension contributes the following settings:
 
-* `sct_tester.tj_path`: path to tj.exe (global program, it is overriden by local tj.exe if exists)
-* `sct_tester.tj_args`: additional args to run tj.exe with
-* `sct_tester.clearoldresults`: clear old results if present
-* `sct_tester.autoopenresults`: automaticly opens results html file in web browser when tests are finished (only windows)
+- `sct_tester.tj_path`: path to tj.exe (global program, it is overriden by local tj.exe if exists)
+- `sct_tester.tj_args`: additional args to run tj.exe with
+- `sct_tester.clearoldresults`: clear old results if present
+- `sct_tester.autoopenresults`: automaticly opens results html file in web browser when tests are finished (only windows)
 
 Or you can override global settings with specific settings for directory with `.tconfig` file:
 
@@ -56,6 +64,7 @@ Or you can override global settings with specific settings for directory with `.
 ## Known Issues
 
 1.0.0
+
 - Not working when results directory doesn't exist
 
 ## Release Notes
