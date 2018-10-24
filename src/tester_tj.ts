@@ -184,13 +184,18 @@ export class Tester_tj extends Tester {
         /*
             TODO section
         */
-        // Open results in web browser
-        let resultcmd: string = '';
-        if (this.gConfig.autoopenresults) {
-            if (process.platform === 'win32') {
+        
+        // OS dependant settings
+        let cmd: string = `${this.gConfig.tj_path} ${this.gConfig.tj_args} ${this.gConfig.file.path} ${this.gConfig.test.dir} ${this.gConfig.result.dir}`;
+        let isWin: boolean = process.platform === "win32";
+        
+        if (isWin) { // Windows dependant
+            if (this.gConfig.autoopenresults) {
                 // TODO find any html file
                 let resultfile = path.join(this.gConfig.result.dir || '', 'prikaz.htm');
                 console.log('Opening ' + resultfile);
+
+                cmd += ` ; start ${resultfile}`; // Append command to open browser at the end
                 
                 /*exec(`start ${resultfile}`, (err: any, stdout: any, stderr: any) => {
                     if (err) {
@@ -203,13 +208,14 @@ export class Tester_tj extends Tester {
                     //console.log(`stdout: ${stdout}`);
                     //console.log(`stderr: ${stderr}`);
                 });*/
-            resultcmd = ` ; start ${resultfile}`;
-            } else {
+            }
+        } else { // It's linux style OS
+            cmd = `mono ` + cmd; // Append mono at the front
+            if (this.gConfig.autoopenresults) {
                 console.log('Auto open not implemented yet');
             }
         }
 
-        let cmd: string = `${this.gConfig.tj_path} ${this.gConfig.tj_args} ${this.gConfig.file.path} ${this.gConfig.test.dir} ${this.gConfig.result.dir}${resultcmd}`;
         console.log(cmd);
         onTest(cmd);
     }

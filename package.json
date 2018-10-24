@@ -2,7 +2,7 @@
     "name": "scttester",
     "displayName": "SCT Tester",
     "description": "Extensions for testing programs for FRI BUN",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "slocomptech",
     "repository": {
         "type": "git",
